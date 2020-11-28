@@ -4,6 +4,8 @@
 package bil481Hw1Part2;
 
 import java.util.ArrayList;
+import jdk.nashorn.internal.runtime.ECMAErrors;
+
 
 public class App {
     public static int sumOfNumbersInIndeces(ArrayList<Integer> array, int firstIndex, int secondIndex)throws Exception{
