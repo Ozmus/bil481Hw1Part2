@@ -31,7 +31,26 @@ class AppTest {
                 () -> { App.sumOfNumbersInIndeces(b, 0, 0); });
         
     }
+    @Test void emptyArrayTest() {
 
+        ArrayList<Integer> b= new ArrayList<Integer>();        
+        assertThrows(
+				Exception.class,
+                () -> { App.sumOfNumbersInIndeces(b, 0, 0); });
+        
+    }
+    @Test void largeIntegerTest() {
+        ArrayList<Integer> a = new ArrayList<Integer>();
+        
+        a.add(100000);
+        a.add(200000);
+        
+        try{
+        assertEquals(300000,App.sumOfNumbersInIndeces(a, 1, 0));
+        }catch(Exception e){
+
+        }
+    }
     @Test void correctInputTest() {
         ArrayList<Integer> a = new ArrayList<Integer>();
         for(int i = 0 ; i<10; i++){
